@@ -14,6 +14,43 @@ import "strconv"
 // and reply for an RPC.
 //
 
+type ReduceTaskCompleteNotificationRequestArgs struct {
+	ReducePartition int
+}
+
+type ReduceTaskCompleteNotificationReplyArgs struct {
+	
+}
+
+type MapTaskCompleteNotificationRequestArgs struct {
+	Files []string
+}
+
+type MapTaskCompleteNotificationReplyArgs struct {
+	
+}
+
+
+type ReduceTaskRequestArgs struct {
+	
+}
+
+type ReduceTaskReplyArgs struct {
+	ReducePartition int
+}
+
+
+type MapTaskRequestArgs struct {
+	NumFiles int 
+}
+
+type MapTaskReplyArgs struct {
+	NReduce int
+	TaskID int
+	Files []string
+	NoMoreMapTask bool
+}
+
 type ExampleArgs struct {
 	X int
 }
